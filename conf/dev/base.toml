@@ -5,7 +5,7 @@
     time_location="Asia/Chongqing"
 
 [http]
-    addr =":8880"                       # 监听地址, default ":8700"
+    addr =":8888"                       # 监听地址, default ":8700"
     read_timeout = 10                   # 读取超时时长
     write_timeout = 10                  # 写入超时时长
     max_header_bytes = 20               # 最大的header大小，二进制位长度
@@ -15,7 +15,7 @@
     ]
 
 [session]
-    redis_server = "127.0.0.1:6379"   #redis session server
+    redis_server = "172.16.76.194:6399"   #redis session server
     redis_password = ""
 
 [log]
@@ -32,11 +32,11 @@
 
 [cluster]
     cluster_ip="127.0.0.1"
-    cluster_port="8080"
+    cluster_port="8088"
     cluster_ssl_port="4433"
 
 [swagger]
     title="go_gateway swagger API"
     desc="This is a sample server celler server."
-    host="127.0.0.1:8880"
+    host="127.0.0.1:8888"
     base_path=""

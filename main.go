@@ -17,8 +17,8 @@ import (
 //config ./conf/prod/ 对应配置文件夹
 
 var (
-	endpoint = flag.String("endpoint", "", "input endpoint dashboard or server")
-	config   = flag.String("config", "", "input config file like ./conf/dev/")
+	endpoint = flag.String("endpoint", "127.0.0.1", "input endpoint dashboard or server")
+	config   = flag.String("config", "./conf/dev/", "input config file like ./conf/dev/")
 )
 
 func main() {
