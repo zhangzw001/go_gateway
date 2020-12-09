@@ -16,7 +16,6 @@ func APPRegister(router *gin.RouterGroup) {
 	admin := APPController{}
 	router.GET("/app_list", admin.APPList)
 	router.GET("/app_detail", admin.APPDetail)
-	router.GET("/app_stat", admin.AppStatistics)
 	router.GET("/app_delete", admin.APPDelete)
 	router.POST("/app_add", admin.AppAdd)
 	router.POST("/app_update", admin.AppUpdate)
@@ -229,7 +228,7 @@ func (admin *APPController) AppUpdate(c *gin.Context) {
 // @Description 租户统计
 // @Tags 租户管理
 // @ID /app/app_stat
-// @Accept  json
+// @Accept  json	router.GET("/app_stat", admin.AppStatistics)
 // @Produce  json
 // @Param id query string true "租户ID"
 // @Success 200 {object} middleware.Response{data=dto.StatisticsOutput} "success"
